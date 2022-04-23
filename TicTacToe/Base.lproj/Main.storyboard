@@ -130,16 +130,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Xplayer" translatesAutoresizingMaskIntoConstraints="NO" id="ITA-eA-lED">
+                                <rect key="frame" x="167" y="101" width="80" height="80"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TURN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCC-GF-No7">
                                 <rect key="frame" x="167.5" y="189" width="79" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Xplayer" translatesAutoresizingMaskIntoConstraints="NO" id="ITA-eA-lED">
-                                <rect key="frame" x="167" y="101" width="80" height="80"/>
-                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NO ONE WIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9m-tp-j3t">
+                                <rect key="frame" x="57" y="715" width="301" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -168,6 +175,7 @@
                         <outlet property="c1" destination="Io5-PU-LGf" id="XJP-e9-L8h"/>
                         <outlet property="c2" destination="fqf-5d-00l" id="0lo-We-HLG"/>
                         <outlet property="c3" destination="yg7-bc-8Iu" id="MYR-Zx-76c"/>
+                        <outlet property="result" destination="S9m-tp-j3t" id="6w7-s3-dUI"/>
                         <outlet property="turnImage" destination="ITA-eA-lED" id="EZo-Z5-Am1"/>
                     </connections>
                 </viewController>

@@ -24,13 +24,28 @@ class ViewController: UIViewController
     @IBOutlet weak var c1: UIButton!
     @IBOutlet weak var c2: UIButton!
     @IBOutlet weak var c3: UIButton!
+    @IBOutlet weak var result: UILabel!
     
     var turn=whosTurn.xPlay;
     var board=[UIButton]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initBoard()
         
+    }
+    
+    func initBoard()
+    {
+        board.append(a1)
+        board.append(a2)
+        board.append(a3)
+        board.append(b1)
+        board.append(b2)
+        board.append(b3)
+        board.append(c1)
+        board.append(c2)
+        board.append(c3)
     }
 
 
@@ -40,8 +55,14 @@ class ViewController: UIViewController
     }
     
     func isFull()->Bool
+    
     {
-        
+        for button in board
+        {
+            if button.image(for: .normal) == nil
+            {return false}
+        }
+        return true
     }
     
     
