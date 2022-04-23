@@ -51,16 +51,68 @@ class ViewController: UIViewController
 
     @IBAction func tap(_ sender: UIButton) {
     
-    addSign(sender)
-    if (isFull())
-    {
-        result.text="NO ONE WINS"
-    }
+        addSign(sender)
+    
+        if checkForVictory(UIImage(named: "Xplayer")!){
+            result.text="X WINS"
+            self.disableBoard()
+        }
+        if checkForVictory(UIImage(named: "Oplayer")!){
+            result.text="O WINS"
+            self.disableBoard()
+        }
+        if (isFull())
+        {
+            result.text="NO ONE WINS"
+            self.disableBoard()
+        }
 
     }
         
+    func checkForVictory(_ i : UIImage) -> Bool{
+        
+        //Horizontal Win
+        if thisSymbol(a1,i) && thisSymbol(a2, i) && thisSymbol(a3, i){
+            return true
+        }
+        if thisSymbol(b1,i) && thisSymbol(b2, i) && thisSymbol(b3, i){
+            return true
+        }
+        if thisSymbol(c1,i) && thisSymbol(c2, i) && thisSymbol(c3, i){
+            return true
+        }
+        
+        //Vertical Win
+        if thisSymbol(a1,i) && thisSymbol(b1, i) && thisSymbol(c1, i){
+            return true
+        }
+        if thisSymbol(a2,i) && thisSymbol(b2, i) && thisSymbol(c2, i){
+            return true
+        }
+        if thisSymbol(a3,i) && thisSymbol(b3, i) && thisSymbol(c3, i){
+            return true
+        }
+        
+        //Diagonal Win
+        if thisSymbol(a1,i) && thisSymbol(b2, i) && thisSymbol(c3, i){
+            return true
+        }
+        if thisSymbol(a3,i) && thisSymbol(b2, i) && thisSymbol(c1, i){
+            return true
+        }
+        
+        return false
+    }
     
+    func thisSymbol(_ button: UIButton, _ image: UIImage) -> Bool{
+        return button.image(for: .normal) == image
+    }
     
+    func disableBoard(){
+        for button in board{
+            button.isEnabled = false
+        }
+    }
     
     func isFull()->Bool
     
@@ -68,7 +120,9 @@ class ViewController: UIViewController
         for button in board
         {
             if button.image(for: .normal) == nil
-            {return false}
+            {
+                return false
+            }
         }
         return true
     }
