@@ -52,7 +52,15 @@ class ViewController: UIViewController
     @IBAction func tap(_ sender: UIButton) {
     
     addSign(sender)
+    if (isFull())
+    {
+        result.text="NO ONE WINS"
     }
+
+    }
+        
+    
+    
     
     func isFull()->Bool
     
