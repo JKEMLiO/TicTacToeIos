@@ -46,6 +46,7 @@ class ViewController: UIViewController
         board.append(c1)
         board.append(c2)
         board.append(c3)
+        self.resetGame(self)
     }
 
 
@@ -57,11 +58,11 @@ class ViewController: UIViewController
             result.text="X WINS"
             self.disableBoard()
         }
-        if checkForVictory(UIImage(named: "Oplayer")!){
+        else if checkForVictory(UIImage(named: "Oplayer")!){
             result.text="O WINS"
             self.disableBoard()
         }
-        if (isFull())
+        else if (isFull())
         {
             result.text="NO ONE WINS"
             self.disableBoard()
@@ -119,7 +120,7 @@ class ViewController: UIViewController
     {
         for button in board
         {
-            if button.image(for: .normal) == nil
+            if button.image(for: .normal) == UIImage()
             {
                 return false
             }
@@ -130,7 +131,7 @@ class ViewController: UIViewController
     
     func addSign(_ sender:UIButton)
     {
-        if(sender.image(for: .normal)==nil)
+        if(sender.image(for: .normal)==UIImage())
         {
             if(turn==whosTurn.xPlay)
             {
@@ -151,5 +152,16 @@ class ViewController: UIViewController
             }
         }
     }
+    
+    @IBAction func resetGame(_ sender: Any) {
+        for button in board{
+            button.setImage(UIImage(),for: .normal)
+            button.isEnabled = true
+        }
+        turn = whosTurn.xPlay
+        turnImage.image=UIImage(named: "Xplayer")
+        result.text = ""
+    }
+    
 }
 
