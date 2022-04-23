@@ -136,10 +136,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Xplayer" translatesAutoresizingMaskIntoConstraints="NO" id="ITA-eA-lED">
-                                <rect key="frame" x="164" y="101" width="87" height="80"/>
-                                <rect key="contentStretch" x="0.0" y="0.0" width="0.80000000000000004" height="0.80000000000000004"/>
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Xplayer" translatesAutoresizingMaskIntoConstraints="NO" id="ITA-eA-lED">
+                                <rect key="frame" x="167" y="101" width="80" height="80"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -178,7 +177,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Xplayer" width="95" height="100"/>
+        <image name="Xplayer" width="80" height="80"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

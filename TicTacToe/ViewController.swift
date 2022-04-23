@@ -26,9 +26,11 @@ class ViewController: UIViewController
     @IBOutlet weak var c3: UIButton!
     
     var turn=whosTurn.xPlay;
+    var board=[UIButton]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
 
 
@@ -36,6 +38,12 @@ class ViewController: UIViewController
     
     addSign(sender)
     }
+    
+    func isFull()->Bool
+    {
+        
+    }
+    
     
     func addSign(_ sender:UIButton)
     {
@@ -54,7 +62,7 @@ class ViewController: UIViewController
             {
                 sender.setImage(UIImage(named: "Oplayer"), for: .normal);
                 turn=whosTurn.xPlay;
-                turnImage.image=UIImage(named: "xplayer");
+                turnImage.image=UIImage(named: "Xplayer");
                 
                 
             }
